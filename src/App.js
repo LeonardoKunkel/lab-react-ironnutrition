@@ -9,13 +9,21 @@ function App() {
     <>
       <h2> Food List </h2>
       <hr />
-      
-      <FoodBox food={ {
-        name: "Orange",
-        calories: 85,
-        image: "https://i.imgur.com/abKGOcv.jpg",
-        servings: 1
-    }} />
+      {
+        foods.map((e) => {
+          return(
+
+            <FoodBox
+              food={ {
+                name: e.name,
+                calories: e.calories,
+                image: e.image,
+                servings: e.servings
+              }}
+            />
+          )
+        })
+      }
     </>
   );
 }
