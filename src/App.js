@@ -1,13 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import List from './components/List';
+import FoodBox from './components/FoodBox';
 
-
+import foods from './foods.json';
 
 function App() {
   return (
     <>
-      <List />
+      <h2> Food List </h2>
+      <hr />
+      
+      <FoodBox food={ {
+        name: "Orange",
+        calories: 85,
+        image: "https://i.imgur.com/abKGOcv.jpg",
+        servings: 1
+    }} />
     </>
   );
 }
