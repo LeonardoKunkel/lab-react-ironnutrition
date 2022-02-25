@@ -58,7 +58,7 @@ export default function AddFoodForm(props) {
                 name="name"
                 value={newFood.name}
                 type="text"
-                onChange={(event) => { check(event) }}
+                onChange={event => { check(event) }}
             />
 
             <label>Image</label>
@@ -66,7 +66,7 @@ export default function AddFoodForm(props) {
                 name="image"
                 value={newFood.image}
                 type="text"
-                onChange={(event) => { check(event) }}
+                onChange={event => { check(event) }}
             />
 
             <label>Calories</label>
@@ -74,7 +74,7 @@ export default function AddFoodForm(props) {
                 name="calories"
                 value={newFood.calories}
                 type="text"
-                onChange={(event) => { check(event) }}
+                onChange={event => { check(event) }}
             />
 
             <label>Servings</label>
@@ -82,7 +82,7 @@ export default function AddFoodForm(props) {
                 name="servings"
                 value={newFood.servings}
                 type="text"
-                onChange={(event) => { check(event) }}
+                onChange={event => { check(event) }}
             />
 
             <button type="submit">Create</button>
