@@ -2,15 +2,28 @@ import logo from './logo.svg';
 import './App.css';
 import FoodBox from './components/FoodBox';
 
-import foods from './foods.json';
+import foodsJSON from './foods.json';
 import AddFoodForm from './components/AddFoodForm';
+
+import { useState } from 'react';
 
 import { Row, Divider, Button } from 'antd';
 
 function App() {
+
+  const[foods, setFoods] = useState(foodsJSON)
+
+  const addFood = (newFood) => {
+
+    const updatedFoods = [newFood, ...foods]
+
+    setFoods(updatedFoods)
+
+  }
+
   return (
     <>
-      <AddFoodForm />
+      <AddFoodForm addFoods={ addFood }/>
 
       <Button> Hide Form / Add New Food </Button>
 
